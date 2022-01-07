@@ -70,4 +70,6 @@ app.get("/:id/*", (req, res) => {
 	res.end(JSON.stringify({ error: "Not found" }, null, 2));
 });
 
-app.listen(3000, () => console.log("Listening on port 3000..."));
+const PORT = process.env.PORT ||3000;
+
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
